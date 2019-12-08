@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PassportApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Express Todo App</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-toastr@2/dist/angular-toastr.css">
+	<!-- load fontawesome -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		/* li { display: inline-block; } */
+
+		.rowInline {
+			height: 20px;
+			float: left;
+			list-style-type: none;
+			width: 70px;
+			padding: 3px;
+			border-right: 1px solid #3687AF;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavCtrl">
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<span ng-show="!currentUser">
+						<li class="rowInline">
+							<a href="#login">Login</a>
+						</li>
+						<li class="rowInline">
+							<a href="#signup">Sign Up</a>
+						</li>
+					</span>
+					<span ng-show="currentUser">
+						<li class="rowInline">
+							<a href="#todo">Transfer</a>
+						</li>
+						<li class="rowInline">
+							<a href="#payment">Payment</a>
+						</li>
+						<li class="rowInline">
+							<a href="#logout" ng-click="logout()">Logout</a>
+						</li>
+					</span>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	</br>
+	</br>
+	<div ng-view>
+
+	</div>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/angular-toastr@2/dist/angular-toastr.tpls.js"></script>
+	<script src="./js/app.js" type="text/javascript"></script>
+	<!-- <script src="./js/controllers.js" type="text/javascript"></script> -->
+	<script src="./js/controllers/nav.controller.js" type="text/javascript"></script>
+	<script src="./js/controllers/login.controller.js" type="text/javascript"></script>
+	<script src="./js/controllers/signup.controller.js" type="text/javascript"></script>
+	<script src="./js/controllers/todo.controller.js" type="text/javascript"></script>
+	<script src="./js/services/todo.service.js" type="text/javascript"></script>
+	<script src="./js/controllers/payment.controller.js" type="text/javascript"></script>
+	<script src="./js/services/payment.service.js" type="text/javascript"></script>
+</body>
+
+</html>

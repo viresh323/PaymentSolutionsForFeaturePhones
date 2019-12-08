@@ -1,0 +1,50 @@
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<div ng-app="TaskManager" style="margin-top:150px;">
+	<div class="container">
+		<div class="content" ng-controller="taskController">
+			<h1>Fund Transfer</h1>
+			<p class="tagline">An Secure Transfer App</p>
+			<form>
+				<div class="inputContainer half last right">
+					<input type="text" id="description" class="taskName" placeholder="Purpose of the transfer?"
+						ng-model="purpose">
+					<label for="description">Description</label>
+				</div>
+				<div class="inputContainer half last left">
+					<input type="password" id="secretKey" class="taskDate" ng-model="secretKey">
+					<label for="secretKey">Secret Key</label>
+				</div>
+				<div class="inputContainer half last right">
+					<input type="text" id="accountNumber" class="taskDate" ng-model="accountNumber">
+					<label for="accountNumber">Account Number</label>
+				</div>
+				<div class="inputContainer half last left">
+					<input type="number" id="dueDate" class="taskDate" ng-model="amount">
+					<label for="amount">Amount</label>
+				</div>
+				<div class="row">
+					<button class="taskAdd" ng-click="transfer()">
+						<i class="fa fa-plus icon"></i>Transfer</button>
+					<button class="taskDelete" ng-click="deleteTask()">
+						<i class="fa fa-trash-o icon"></i>Delete Tasks</button>
+				</div>
+			</form>
+			<ul class="taskList">
+				<!-- <span class="category-Work">Balance: {{balance}}</span> -->
+				<li class="taskItem" ng-repeat="balances in balances track by $index" ng-model="balances">
+					<span class="category-Cleaning">Balance: {{balances.balance}}</span>
+				</li>
+			</ul>
+			<ul class="taskList">
+				<li class="taskItem" ng-repeat="taskItem in taskItem track by $index" ng-model="taskItem">
+					<span class="category-Work">Account Number: {{taskItem.destinationAccountNumber}}</span>
+					<span class="category-Personal">Amount: {{taskItem.amount}}</span>
+					<span class="category-School">Purpose: {{taskItem.purpose}}</span>
+				</li>
+			</ul>
+			<!-- taskList -->
+		</div>
+		<!-- content -->
+	</div>
+	<!-- container -->
+</div>

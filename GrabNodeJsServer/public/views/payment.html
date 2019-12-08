@@ -1,0 +1,34 @@
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<div ng-app="PayementManager" style="margin-top:150px;">
+	<div class="container">
+		<div class="content" ng-controller="paymentCrtl">
+			<h1>Receive Payement</h1>
+			<p class="tagline">An Secure Transfer App</p>
+			<form>
+				<div class="inputContainer half last">
+					<input type="text" id="mobilenumber" class="taskName" placeholder="Enter Mobile Number"
+						ng-model="mobilenumber">
+					<label for="mobilenumber">Mobile Number</label>
+				</div>
+				<div class="inputContainer ">
+					<input type="text" id="amount" class="taskName" placeholder="Enter Transferring Amount"
+						ng-model="amount">
+					<label for="amount">Amount</label>
+				</div>
+				<div class="inputContainer">
+					<input type="text" id="otp" class="taskDate" placeholder="Enter OTP" ng-model="otp">
+					<label for="otp">OTP</label>
+				</div>
+				<div class="row">
+					<button class="taskAdd requestBtn" ng-click="requestOTP()">
+						<i class="fa fa-plus icon"></i>Request OTP</button>
+					<button class="taskDelete" ng-click="receiveAmt()">
+						<i class="fa fa-plus icon"></i>Receive Amount</button>
+				</div>
+			</form>
+			<!-- taskList -->
+		</div>
+		<!-- content -->
+	</div>
+	<!-- container -->
+</div>
