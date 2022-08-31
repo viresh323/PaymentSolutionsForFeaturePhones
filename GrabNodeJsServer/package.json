@@ -73,7 +73,7 @@
     "jwt-simple": "0.5.1",
     "lodash": "^4.17.4",
     "method-override": "^2.3.8",
-    "moment-timezone": "^0.5.13",
+    "moment-timezone": "^0.5.35",
     "mongoose": "^4.9.7",
     "morgan": "^1.8.1",
     "node-sms-send": "^0.1.3",
